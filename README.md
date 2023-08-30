@@ -34,7 +34,7 @@ final class ViewController: UIViewController {
     @IBAction func convertHTML(_ sender: UIButton) {
         
         guard let text = myTextView.text,
-              let htmlString = WWJavaScriptContext.MarkDown.shared.convertHTML(source: text)
+              let htmlString = WWJavaScriptContext.Markdown.shared.convertHTML(source: text)
         else {
             return
         }

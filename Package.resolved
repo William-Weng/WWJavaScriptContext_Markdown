@@ -8,15 +8,6 @@
         "revision" : "983111177d7b64ef90f0c77d4db928187b9d756d",
         "version" : "1.0.1"
       }
-    },
-    {
-      "identity" : "wwprint",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/William-Weng/WWPrint",
-      "state" : {
-        "revision" : "6b70fabaa1dbeac95b224384819e231a1220900a",
-        "version" : "1.2.0"
-      }
     }
   ],
   "version" : 2

@@ -26,7 +26,7 @@ final class ViewController: UIViewController {
         defer { view.endEditing(true) }
         
         guard let text = myTextView.text,
-              let htmlString = WWJavaScriptContext.MarkDown.shared.convertHTML(source: text)
+              let htmlString = WWJavaScriptContext.Markdown.shared.convertHTML(source: text)
         else {
             return
         }

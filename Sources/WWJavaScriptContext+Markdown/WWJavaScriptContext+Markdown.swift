@@ -5,23 +5,23 @@ import WWJavaScriptContext
 // MARK: - WWJavaScriptContext.MarkDown
 extension WWJavaScriptContext {
     
-    open class MarkDown: NSObject {
+    open class Markdown: NSObject {
         
-        public static let shared = MarkDown(path: "ShowDown-2.1.0.js")
+        public static let shared = Markdown(filename: "ShowDown-2.1.0.js")
         
         var context: WWJavaScriptContext?
         
         private override init() {}
         
-        convenience init(path: String) {
+        convenience init(filename: String) {
             self.init()
-            self.context = self.build()
+            self.context = self.build(filename: filename)
         }
     }
 }
 
 // MARK: - 公開函數
-public extension WWJavaScriptContext.MarkDown {
+public extension WWJavaScriptContext.Markdown {
     
     /// [轉換Markdown => HTML](https://cdnjs.cloudflare.com/ajax/libs/showdown/2.1.0/showdown.min.js)
     /// - Parameters:
@@ -42,13 +42,14 @@ public extension WWJavaScriptContext.MarkDown {
 }
 
 // MARK: - 小工具
-private extension WWJavaScriptContext.MarkDown {
+private extension WWJavaScriptContext.Markdown {
     
     /// 建立初始物件
+    /// - Parameter filename: String
     /// - Returns: WWJavaScriptContext?
-    func build() -> WWJavaScriptContext? {
+    func build(filename: String) -> WWJavaScriptContext? {
         
-        guard let script = readScript(with: "ShowDown-2.1.0.js") else { return nil }
+        guard let script = readScript(with: filename) else { return nil }
         return WWJavaScriptContext.build(script: script)
     }
     
