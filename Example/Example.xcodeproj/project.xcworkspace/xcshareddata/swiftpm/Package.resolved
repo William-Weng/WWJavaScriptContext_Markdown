@@ -14,8 +14,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/William-Weng/WWJavaScriptContext_Markdown",
       "state" : {
-        "branch" : "main",
-        "revision" : "2170b1b0979856ac021819ac94b34ae315f71012"
+        "revision" : "ee3df51d16962d4035c46748cb4b9a74c7b0cd13",
+        "version" : "1.0.0"
       }
     },
     {
