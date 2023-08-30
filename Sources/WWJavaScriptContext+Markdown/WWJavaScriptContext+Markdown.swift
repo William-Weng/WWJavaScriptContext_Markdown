@@ -30,16 +30,12 @@ public extension WWJavaScriptContext.MarkDown {
     /// - Returns: JSValue?
     func convertHTML(source: String) -> JSValue? {
 
-        guard let context = context else { return nil }
-
-        let script = """
-        function convertMarkdown(source) {
-            let converter = new showdown.Converter()
-            let htmlResult = converter.makeHtml(source)
-            return htmlResult;
+        guard let context = context,
+              let script = readScript(with: "jsSource.js")
+        else {
+            return nil
         }
-        """
-
+        
         _ = context.evaluateScript(script)
         return context.callFunctionName("convertMarkdown", arguments: [source])
     }
@@ -52,12 +48,21 @@ private extension WWJavaScriptContext.MarkDown {
     /// - Returns: WWJavaScriptContext?
     func build() -> WWJavaScriptContext? {
         
-        guard let sourcePath: String = Bundle.module.path(forResource: "ShowDown-2.1.0.js", ofType: nil),
+        guard let script = readScript(with: "ShowDown-2.1.0.js") else { return nil }
+        return WWJavaScriptContext.build(script: script)
+    }
+    
+    /// 讀取Script
+    /// - Parameter filename: String
+    /// - Returns: String?
+    func readScript(with filename: String) -> String? {
+        
+        guard let sourcePath: String = Bundle.module.path(forResource: filename, ofType: nil),
               let script = try? String(contentsOfFile: sourcePath)
         else {
             return nil
         }
         
-        return WWJavaScriptContext.build(script: script)
+        return script
     }
 }
