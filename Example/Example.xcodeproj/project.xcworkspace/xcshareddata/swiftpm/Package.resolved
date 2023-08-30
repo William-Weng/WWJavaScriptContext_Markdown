@@ -1,0 +1,32 @@
+{
+  "pins" : [
+    {
+      "identity" : "wwjavascriptcontext",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/William-Weng/WWJavaScriptContext",
+      "state" : {
+        "revision" : "983111177d7b64ef90f0c77d4db928187b9d756d",
+        "version" : "1.0.1"
+      }
+    },
+    {
+      "identity" : "wwjavascriptcontext_markdown",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/William-Weng/WWJavaScriptContext_Markdown",
+      "state" : {
+        "branch" : "main",
+        "revision" : "2170b1b0979856ac021819ac94b34ae315f71012"
+      }
+    },
+    {
+      "identity" : "wwprint",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/William-Weng/WWPrint",
+      "state" : {
+        "revision" : "6b70fabaa1dbeac95b224384819e231a1220900a",
+        "version" : "1.2.0"
+      }
+    }
+  ],
+  "version" : 2
+}
