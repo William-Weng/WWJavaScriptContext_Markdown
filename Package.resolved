@@ -5,8 +5,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/William-Weng/WWJavaScriptContext",
       "state" : {
-        "revision" : "983111177d7b64ef90f0c77d4db928187b9d756d",
-        "version" : "1.0.1"
+        "revision" : "1959bc6f5a18f12a60c294142aafca05b02fb087",
+        "version" : "1.0.3"
       }
     }
   ],

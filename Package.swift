@@ -12,10 +12,10 @@ let package = Package(
         .library(name: "WWJavaScriptContext+Markdown", targets: ["WWJavaScriptContext+Markdown"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/William-Weng/WWJavaScriptContext", from: "1.0.1"),
+        .package(url: "https://github.com/William-Weng/WWJavaScriptContext", from: "1.0.3"),
     ],
     targets: [
-        .target(name: "WWJavaScriptContext+Markdown", dependencies: ["WWJavaScriptContext"], resources: [.process("Script")]),
+        .target(name: "WWJavaScriptContext+Markdown", dependencies: ["WWJavaScriptContext"], resources: [.process("Script"), .copy("Privacy")]),
     ],
     swiftLanguageVersions: [
         .v5
