@@ -10,20 +10,19 @@
 ### [Installation with Swift Package Manager](https://medium.com/彼得潘的-swift-ios-app-開發問題解答集/使用-spm-安裝第三方套件-xcode-11-新功能-2c4ffcf85b4b)
 ```js
 dependencies: [
-    .package(url: "https://github.com/William-Weng/WWJavaScriptContext_Markdown.git", .upToNextMajor(from: "1.0.0"))
+    .package(url: "https://github.com/William-Weng/WWJavaScriptContext_Markdown.git", .upToNextMajor(from: "1.0.5"))
 ]
 ```
 
 ### Function - 可用函式
 |函式|功能|
 |-|-|
-|convertHTML(source:)|轉換Markdown => HTML|
+|convert(markdown:)|轉換Markdown => HTML|
 
 ### Example
 ```swift
 import UIKit
 import WebKit
-import WWPrint
 import WWJavaScriptContext
 import WWJavaScriptContext_Markdown
 
@@ -36,15 +35,16 @@ final class ViewController: UIViewController {
         super.viewDidLoad()
     }
     
-    @IBAction func convertHTML(_ sender: UIButton) {
+    @IBAction func convertMarkdown(_ sender: UIButton) {
         
-        guard let text = myTextView.text,
-              let htmlString = WWJavaScriptContext.Markdown.shared.convertHTML(source: text)
+        defer { view.endEditing(true) }
+        
+        guard let markdown = myTextView.text,
+              let htmlString = WWJavaScriptContext.Markdown.shared.convert(markdown: markdown)
         else {
             return
         }
         
-        wwPrint(htmlString)
         myWebView.loadHTMLString("\(htmlString)", baseURL: nil)
     }
 }

@@ -8,7 +8,6 @@
 
 import UIKit
 import WebKit
-import WWPrint
 import WWJavaScriptContext
 import WWJavaScriptContext_Markdown
 
@@ -21,17 +20,16 @@ final class ViewController: UIViewController {
         super.viewDidLoad()
     }
     
-    @IBAction func convertHTML(_ sender: UIButton) {
+    @IBAction func convertMarkdown(_ sender: UIButton) {
         
         defer { view.endEditing(true) }
         
-        guard let text = myTextView.text,
-              let htmlString = WWJavaScriptContext.Markdown.shared.convertHTML(source: text)
+        guard let markdown = myTextView.text,
+              let htmlString = WWJavaScriptContext.Markdown.shared.convert(markdown: markdown)
         else {
             return
         }
         
-        wwPrint(htmlString)
         myWebView.loadHTMLString("\(htmlString)", baseURL: nil)
     }
 }

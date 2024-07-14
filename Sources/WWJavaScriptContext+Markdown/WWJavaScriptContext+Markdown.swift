@@ -28,7 +28,7 @@ public extension WWJavaScriptContext.Markdown {
     ///   - context: WWJavaScriptContext
     ///   - source: String
     /// - Returns: JSValue?
-    func convertHTML(source: String) -> JSValue? {
+    func convert(markdown: String) -> JSValue? {
 
         guard let context = context,
               let script = readScript(with: "jsSource.js")
@@ -37,7 +37,7 @@ public extension WWJavaScriptContext.Markdown {
         }
         
         _ = context.evaluateScript(script)
-        return context.callFunctionName("convertMarkdown", arguments: [source])
+        return context.callFunctionName("convertMarkdown", arguments: [markdown])
     }
 }
 
