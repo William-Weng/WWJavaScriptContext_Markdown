@@ -10,14 +10,14 @@
 ### [Installation with Swift Package Manager](https://medium.com/彼得潘的-swift-ios-app-開發問題解答集/使用-spm-安裝第三方套件-xcode-11-新功能-2c4ffcf85b4b)
 ```js
 dependencies: [
-    .package(url: "https://github.com/William-Weng/WWJavaScriptContext_Markdown.git", .upToNextMajor(from: "1.0.5"))
+    .package(url: "https://github.com/William-Weng/WWJavaScriptContext_Markdown.git", .upToNextMajor(from: "1.1.0"))
 ]
 ```
 
 ### Function - 可用函式
 |函式|功能|
 |-|-|
-|convert(markdown:)|轉換Markdown => HTML|
+|convert(markdown:tables:)|轉換Markdown => HTML|
 
 ### Example
 ```swift
@@ -40,7 +40,7 @@ final class ViewController: UIViewController {
         defer { view.endEditing(true) }
         
         guard let markdown = myTextView.text,
-              let htmlString = WWJavaScriptContext.Markdown.shared.convert(markdown: markdown)
+              let htmlString = WWJavaScriptContext.Markdown.shared.convert(markdown: markdown, tables: true)
         else {
             return
         }

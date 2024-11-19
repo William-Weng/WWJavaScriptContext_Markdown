@@ -25,7 +25,7 @@ final class ViewController: UIViewController {
         defer { view.endEditing(true) }
         
         guard let markdown = myTextView.text,
-              let htmlString = WWJavaScriptContext.Markdown.shared.convert(markdown: markdown)
+              let htmlString = WWJavaScriptContext.Markdown.shared.convert(markdown: markdown, tables: true)
         else {
             return
         }

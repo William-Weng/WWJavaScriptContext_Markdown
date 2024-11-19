@@ -25,11 +25,11 @@ public extension WWJavaScriptContext.Markdown {
     
     /// [轉換Markdown => HTML](https://cdnjs.cloudflare.com/ajax/libs/showdown/2.1.0/showdown.min.js)
     /// - Parameters:
-    ///   - context: WWJavaScriptContext
-    ///   - source: String
+    ///   - markdown: String
+    ///   - tables: [是否開啟HTML的原生Table顯示](https://blog.csdn.net/StimmerLove/article/details/88966827)
     /// - Returns: JSValue?
-    func convert(markdown: String) -> JSValue? {
-
+    func convert(markdown: String, tables: Bool = false) -> JSValue? {
+        
         guard let context = context,
               let script = readScript(with: "jsSource.js")
         else {
@@ -37,7 +37,7 @@ public extension WWJavaScriptContext.Markdown {
         }
         
         _ = context.evaluateScript(script)
-        return context.callFunctionName("convertMarkdown", arguments: [markdown])
+        return context.callFunctionName("convertMarkdown", arguments: [markdown, tables])
     }
 }
 

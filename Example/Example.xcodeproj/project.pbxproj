@@ -13,9 +13,9 @@
 		3DBCD87D26F198F300522E3B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DBCD87C26F198F300522E3B /* Assets.xcassets */; };
 		3DBCD88026F198F300522E3B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DBCD87E26F198F300522E3B /* LaunchScreen.storyboard */; };
 		6406510A2C437D6F0033A3B6 /* WWJavaScriptContext+Markdown in Frameworks */ = {isa = PBXBuildFile; productRef = 640651092C437D6F0033A3B6 /* WWJavaScriptContext+Markdown */; };
-		6406510D2C437E4B0033A3B6 /* WWJavaScriptContext+Markdown in Frameworks */ = {isa = PBXBuildFile; productRef = 6406510C2C437E4B0033A3B6 /* WWJavaScriptContext+Markdown */; };
 		8130039027D5D18100436128 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8130038F27D5D18100436128 /* Constant.swift */; };
 		8130039227D5D19000436128 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8130039127D5D19000436128 /* Extension.swift */; };
+		818063662CEC920B00BD0B0D /* WWJavaScriptContext+Markdown in Frameworks */ = {isa = PBXBuildFile; productRef = 818063652CEC920B00BD0B0D /* WWJavaScriptContext+Markdown */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,7 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6406510D2C437E4B0033A3B6 /* WWJavaScriptContext+Markdown in Frameworks */,
+				818063662CEC920B00BD0B0D /* WWJavaScriptContext+Markdown in Frameworks */,
 				6406510A2C437D6F0033A3B6 /* WWJavaScriptContext+Markdown in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -150,7 +150,7 @@
 			name = Example;
 			packageProductDependencies = (
 				640651092C437D6F0033A3B6 /* WWJavaScriptContext+Markdown */,
-				6406510C2C437E4B0033A3B6 /* WWJavaScriptContext+Markdown */,
+				818063652CEC920B00BD0B0D /* WWJavaScriptContext+Markdown */,
 			);
 			productName = Example;
 			productReference = 3DBCD87026F198EF00522E3B /* Example.app */;
@@ -180,7 +180,7 @@
 			);
 			mainGroup = 3DBCD86726F198EF00522E3B;
 			packageReferences = (
-				6406510B2C437E4B0033A3B6 /* XCRemoteSwiftPackageReference "WWJavaScriptContext_Markdown" */,
+				818063642CEC920B00BD0B0D /* XCRemoteSwiftPackageReference "WWJavaScriptContext_Markdown" */,
 			);
 			productRefGroup = 3DBCD87126F198EF00522E3B /* Products */;
 			projectDirPath = "";
@@ -424,12 +424,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		6406510B2C437E4B0033A3B6 /* XCRemoteSwiftPackageReference "WWJavaScriptContext_Markdown" */ = {
+		818063642CEC920B00BD0B0D /* XCRemoteSwiftPackageReference "WWJavaScriptContext_Markdown" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/William-Weng/WWJavaScriptContext_Markdown";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.4;
+				minimumVersion = 1.0.5;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -439,9 +439,9 @@
 			isa = XCSwiftPackageProductDependency;
 			productName = "WWJavaScriptContext+Markdown";
 		};
-		6406510C2C437E4B0033A3B6 /* WWJavaScriptContext+Markdown */ = {
+		818063652CEC920B00BD0B0D /* WWJavaScriptContext+Markdown */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 6406510B2C437E4B0033A3B6 /* XCRemoteSwiftPackageReference "WWJavaScriptContext_Markdown" */;
+			package = 818063642CEC920B00BD0B0D /* XCRemoteSwiftPackageReference "WWJavaScriptContext_Markdown" */;
 			productName = "WWJavaScriptContext+Markdown";
 		};
 /* End XCSwiftPackageProductDependency section */

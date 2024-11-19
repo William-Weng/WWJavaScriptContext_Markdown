@@ -1,5 +1,4 @@
 {
-  "originHash" : "f8b7dca6c03f0773fc2e736ad48e2f5a5e9e28e1d1f35f61f75a9fe02cba9576",
   "pins" : [
     {
       "identity" : "wwjavascriptcontext",
@@ -15,10 +14,10 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/William-Weng/WWJavaScriptContext_Markdown",
       "state" : {
-        "revision" : "8c0546a0ce7a44e11a0b502c54d8bbf02d5a3a2a",
-        "version" : "1.0.4"
+        "revision" : "947c6575b808b00bfa263a614773c8f9f164d5a9",
+        "version" : "1.0.5"
       }
     }
   ],
-  "version" : 3
+  "version" : 2
 }
