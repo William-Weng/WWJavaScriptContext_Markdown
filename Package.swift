@@ -1,21 +1,21 @@
-// swift-tools-version: 5.6
+// swift-tools-version: 5.7
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
 
 let package = Package(
-    name: "WWJavaScriptContext+Markdown",
+    name: "WWJavaScriptContext_Markdown",
     platforms: [
-        .iOS(.v14),
+        .iOS(.v15),
     ],
     products: [
-        .library(name: "WWJavaScriptContext+Markdown", targets: ["WWJavaScriptContext+Markdown"]),
+        .library(name: "WWJavaScriptContext_Markdown", targets: ["WWJavaScriptContext_Markdown"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/William-Weng/WWJavaScriptContext", from: "1.0.3"),
+        .package(url: "https://github.com/William-Weng/WWJavaScriptContext", from: "1.1.0"),
     ],
     targets: [
-        .target(name: "WWJavaScriptContext+Markdown", dependencies: ["WWJavaScriptContext"], resources: [.process("Script"), .copy("Privacy")]),
+        .target(name: "WWJavaScriptContext_Markdown", dependencies: ["WWJavaScriptContext"], resources: [.process("Script"), .copy("Privacy")]),
     ],
     swiftLanguageVersions: [
         .v5
