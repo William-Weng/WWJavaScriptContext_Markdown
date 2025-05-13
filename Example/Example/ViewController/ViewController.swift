@@ -25,12 +25,12 @@ final class ViewController: UIViewController {
         defer { view.endEditing(true) }
         
         guard let markdown = myTextView.text,
-              let htmlString = WWJavaScriptContext.Markdown.shared.convert(markdown: markdown, tables: true)
+              let htmlString = WWJavaScriptContext.Markdown.shared.parse(markdown: markdown)
         else {
             return
         }
-        
-        myWebView.loadHTMLString("\(htmlString)", baseURL: nil)
+                
+        myWebView.loadHTMLString(htmlString.toString(), baseURL: nil)
     }
 }
 

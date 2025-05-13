@@ -15,7 +15,7 @@ extension WWJavaScriptContext {
     
     open class Markdown: NSObject {
         
-        public static let shared = Markdown(filename: "ShowDown-2.1.0.js")
+        public static let shared = Markdown(filename: "Marked-15.0.11.js")
         
         var context: WWJavaScriptContext?
         
@@ -31,12 +31,12 @@ extension WWJavaScriptContext {
 // MARK: - 公開函數
 public extension WWJavaScriptContext.Markdown {
     
-    /// [轉換Markdown => HTML](https://cdnjs.cloudflare.com/ajax/libs/showdown/2.1.0/showdown.min.js)
+    /// [解析Markdown => HTML](https://cdnjs.cloudflare.com/ajax/libs/showdown/2.1.0/showdown.min.js)
     /// - Parameters:
     ///   - markdown: String
     ///   - tables: [是否開啟HTML的原生Table顯示](https://blog.csdn.net/StimmerLove/article/details/88966827)
     /// - Returns: JSValue?
-    func convert(markdown: String, tables: Bool = false) -> JSValue? {
+    func parse(markdown: String) -> JSValue? {
         
         guard let context = context,
               let script = readScript(with: "jsSource.js")
@@ -45,7 +45,7 @@ public extension WWJavaScriptContext.Markdown {
         }
         
         _ = context.evaluateScript(script)
-        return context.callFunctionName("convertMarkdown", arguments: [markdown, tables])
+        return context.callFunctionName("parseMarkdown", arguments: [markdown])
     }
 }
 
