@@ -15,7 +15,7 @@ extension WWJavaScriptContext {
     
     open class Markdown: NSObject {
         
-        public static let shared = Markdown(filename: "Marked-15.0.11.js")
+        public static let shared = Markdown(filename: "Marked-18.0.5.js")
         
         var context: WWJavaScriptContext?
         
@@ -31,7 +31,7 @@ extension WWJavaScriptContext {
 // MARK: - 公開函數
 public extension WWJavaScriptContext.Markdown {
     
-    /// [解析Markdown => HTML](https://cdnjs.cloudflare.com/ajax/libs/showdown/2.1.0/showdown.min.js)
+    /// [解析Markdown => HTML](https://github.com/markedjs/marked)
     /// - Parameters:
     ///   - markdown: String
     ///   - tables: [是否開啟HTML的原生Table顯示](https://blog.csdn.net/StimmerLove/article/details/88966827)

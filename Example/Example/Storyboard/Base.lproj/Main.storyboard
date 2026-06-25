@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -14,16 +13,16 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="z11-UC-HwT">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="rpe-4b-zCk">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="422"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="380"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <mutableString key="text">&lt;a href="https://marked.js.org"&gt;
+                                        <mutableString key="text">&lt;meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"&gt;&lt;a href="https://marked.js.org"&gt;
   &lt;img width="60px" height="60px" src="https://marked.js.org/img/logo-black.svg" align="right" /&gt;
 &lt;/a&gt;
 
@@ -135,7 +134,7 @@ Copyright (c) 2011-2022, Christopher Jeffrey. (MIT License)
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LJz-hz-THd">
-                                        <rect key="frame" x="0.0" y="430" width="414" height="36"/>
+                                        <rect key="frame" x="0.0" y="388" width="375" height="36"/>
                                         <color key="backgroundColor" systemColor="labelColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -143,11 +142,11 @@ Copyright (c) 2011-2022, Christopher Jeffrey. (MIT License)
                                             <color key="titleColor" systemColor="tertiarySystemBackgroundColor"/>
                                         </state>
                                         <connections>
-                                            <action selector="convertMarkdown:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uXp-0W-XI0"/>
+                                            <action selector="convertMarkdown:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nah-gu-Jg9"/>
                                         </connections>
                                     </button>
                                     <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1OH-ZW-GSg">
-                                        <rect key="frame" x="0.0" y="474" width="414" height="422"/>
+                                        <rect key="frame" x="0.0" y="432" width="375" height="380"/>
                                         <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <wkWebViewConfiguration key="configuration">
                                             <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
@@ -173,8 +172,8 @@ Copyright (c) 2011-2022, Christopher Jeffrey. (MIT License)
                         <barButtonItem key="rightBarButtonItem" title="Item" id="r9l-Nt-1FP"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="myTextView" destination="rpe-4b-zCk" id="Rly-3G-pCT"/>
-                        <outlet property="myWebView" destination="1OH-ZW-GSg" id="Wpb-4o-99P"/>
+                        <outlet property="myTextView" destination="rpe-4b-zCk" id="Q2X-WP-enu"/>
+                        <outlet property="myWebView" destination="1OH-ZW-GSg" id="Fc0-Xp-hcR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
