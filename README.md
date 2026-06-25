@@ -3,7 +3,7 @@
 
 ### [Introduction - 簡介](https://swiftpackageindex.com/William-Weng)
 - [Use JavaScript to convert Markdown text.](https://github.com/markedjs/marked)
-- [使用JavaScript做Markdown的文字轉換。](https://peterpanswift.github.io/iphone-bezels/
+- [使用JavaScript做Markdown的文字轉換。](https://peterpanswift.github.io/iphone-bezels/)
 
 ![](./Example.PNG)
 
